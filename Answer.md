@@ -46,6 +46,20 @@ hashCode()方法返回的就是一个数值，从方法名上来看，其目的�
 
 参考自：[http://blog.csdn.net/hla199106/article/details/46907725](http://blog.csdn.net/hla199106/article/details/46907725)
 
+**总结：**
+
+1、Java中的数据类型可分为两类：基本数据类型、引用类型
+
+2、基本数据类型：byte、short、char、int、long、float、double、boolean。他们之间的比较用双等号（==），比较的是**值**
+
+3、引用类型：类、接口、数组。当他们用双等号（==）进行比较的时候，比较的是他们在**内存中的存放地址**。由此可见，**双等号是对栈中的值进行比较的**
+
+对象是放在堆中的，栈中存放的是对象的引用（地址）。
+
+4、默认情况下（没有覆盖equals方法）下的equals方法都是调用Object类的equals方法，而Object的equals方法主要是用于判断**对象的内存地址引用是不是同一个地址**（是不是同一个对象）。
+
+5、hashCode()方法返回的就是一个数值，·hash码的主要用途就是在**对对象进行散列的时候作为key输入**。
+
 
 
 ### 2. <span id="java_base_2">int、char、long 各占多少字节数</span>
